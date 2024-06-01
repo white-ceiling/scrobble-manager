@@ -4,7 +4,9 @@ This allows you to export scrobbles to a CSV and delete scrobbles from an input 
 Note: last.fm sometimes doesn't delete certain scrobbles, due to storing the track information differently than it shows publicly, but it still returns 'true' that the scrobble was deleted. I don't know how to get the internally correct track artist and title, as it doesn't show up from user.getRecentTracks or track.getInfo.
 
 # Creating a ScrobbleManager object
-username: The username of the user you want to export and delete scrobbles from
+`scrobble_manager = ScrobbleManager(user, api_key, api_app_name, web_session_id_cookie)`
+
+user: The username of the user you want to export and delete scrobbles from
 
 api_key, api_app_name: Make an API application at https://www.last.fm/api/account/create if you haven't or use an existing application at https://www.last.fm/api/accounts. Use the value next to "API Key" for the api_key and the Name of the app for api_app_name.
 
@@ -13,7 +15,6 @@ web_session_id_cookie: Grab your sessionid cookie from DevTools while you're on 
 - Firefox > F12 > Storage > Cookies > Go to the sessionid cookie. Copy and paste the cookie value for web_session_id_cookie.
 
 - Note: A valid sessionid starts with a period like '.eXXXXXXXXXX', meaning you are logged in, and is pretty long.
-`scrobble_manager = ScrobbleManager(user, api_key, api_app_name, web_session_id_cookie)`
 
 # Exporting scrobbles to a CSV
 Use the following command to export your scrobbles to a CSV named {user}_full_scrobbles.csv.
