@@ -26,8 +26,9 @@ artist,album,track,unix_timestamp,date
 
 The date is in the timezone your computer uses.
 
-Make a new CSV containing ONLY the scrobble rows you want to delete. 
+You can filter this CSV yourself to create a CSV containing ONLY the scrobble rows you want to delete.
 
+# Deleting scrobbles
 Use this command to delete your scrobbles when you have a CSV with only the scrobbles you want to delete. Replace path_to.csv with the path to the CSV you are using.
 
 `scrobble_manager.delete_scrobbles_from_csv(scrobbles_for_deletion_csv)`
