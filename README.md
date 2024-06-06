@@ -29,6 +29,8 @@ The date is in the timezone your computer uses.
 You can filter this CSV yourself to create a CSV containing ONLY the scrobble rows you want to delete.
 
 # Deleting scrobbles
-Use this command to delete your scrobbles when you have a CSV with ONLY the scrobbles you want to delete. Please do not use {user}_full_scrobbles.csv as the file (This will permanently delete all your scrobbles). Replace path_to.csv with the path to the CSV you are using.
+Use this command to delete your scrobbles when you have a CSV with ONLY the scrobbles you want to delete. Please do not use the generated {user}_full_scrobbles.csv as the file, because this will permanently delete all your scrobbles*. Replace path_to.csv with the path to the CSV you are using.
 
 `scrobble_manager.delete_scrobbles_from_csv(scrobbles_for_deletion_csv)`
+
+* Deleted scrobbles within the past 2 weeks can be added back through the [track.scrobble](https://www.last.fm/api/show/track.scrobble) method from the last.fm API (currently not provided by this tool). If a scrobble is older than 2 weeks, it is impossible to scrobble it without shifting its timestamp to a date within the past 2 weeks.
