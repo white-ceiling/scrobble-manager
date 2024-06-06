@@ -33,4 +33,4 @@ Use this command to delete your scrobbles when you have a CSV with ONLY the scro
 
 `scrobble_manager.delete_scrobbles_from_csv(scrobbles_for_deletion_csv)`
 
-* Deleted scrobbles within the past 2 weeks can be added back through the [track.scrobble](https://www.last.fm/api/show/track.scrobble) method from the last.fm API (currently not provided by this tool). If a scrobble is older than 2 weeks, it is impossible to scrobble it without shifting its timestamp to a date within the past 2 weeks.
+\* Deleted scrobbles within the past 2 weeks can be added back through the [track.scrobble](https://www.last.fm/api/show/track.scrobble) method from the last.fm API (currently not provided by this tool). If a scrobble is older than 2 weeks, it is impossible to scrobble it without shifting its timestamp to a date within the past 2 weeks.
