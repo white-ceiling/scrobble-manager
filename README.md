@@ -29,6 +29,6 @@ The date is in the timezone your computer uses.
 You can filter this CSV yourself to create a CSV containing ONLY the scrobble rows you want to delete.
 
 # Deleting scrobbles
-Use this command to delete your scrobbles when you have a CSV with only the scrobbles you want to delete. Replace path_to.csv with the path to the CSV you are using.
+Use this command to delete your scrobbles when you have a CSV with ONLY the scrobbles you want to delete. Please do not use {user}_full_scrobbles.csv as the file (This will permanently delete all your scrobbles). Replace path_to.csv with the path to the CSV you are using.
 
 `scrobble_manager.delete_scrobbles_from_csv(scrobbles_for_deletion_csv)`
