@@ -8,13 +8,13 @@ class ScrobbleManager:
         self.lfmapi = LastFMUnauthenticatedAPI(api_key, api_app_name)
         self.deleter = DeleteScrobblesAPI(user, web_session_id_cookie)
     
-    def export_scrobbles_to_csv(self):
+    def export_scrobbles_to_csv(self, page_start=1, page_end=None):
         """
         Writes all of the user's scrobbles from the user.getRecentTracks API method to a file named {user}_full_scrobbles.csv.
         """
         user = self.user
         print(f"getting {user}'s scrobbles. this may take a while due to API restrictions")
-        all_scrobbles = self.lfmapi.get_scrobbles_from_user(user)
+        all_scrobbles = self.lfmapi.get_scrobbles_from_user(user, page_start=page_start, page_end=page_end)
         print(f"saving {user}'s scrobbles")
         util.write_rows_to_csv(f"{user}_full_scrobbles.csv", all_scrobbles)
 

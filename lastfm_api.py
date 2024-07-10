@@ -95,7 +95,7 @@ class LastFMUnauthenticatedAPI:
                 print(f"got page {page}/{pages}")
                 page_start = 2
 
-            for page in range(page_start, page_end):
+            for page in range(page_start, page_end + 1):
                 time.sleep(WAIT_SECONDS_AFTER_REQUEST)
                 params.update(page=page)
                 page_scrobbles = self.get_specified_page_scrobbles_from_user(user, page)
